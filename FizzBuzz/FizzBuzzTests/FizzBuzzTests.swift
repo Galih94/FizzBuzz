@@ -18,7 +18,8 @@ public class FizzBuzz {
     }
     
     public func numberBuzz(_ number: Int) -> String? {
-        return nil
+        guard number.isMultiple(of: 5) else { return nil }
+        return "Buzz"
     }
 }
 
@@ -40,5 +41,12 @@ final class FizzBuzzTests: XCTestCase {
     func test_numberBuzz_numberIsNotMultipyOfFive() {
         XCTAssertEqual(FizzBuzz().numberBuzz(2), nil)
         XCTAssertEqual(FizzBuzz().numberBuzz(4), nil)
+    }
+    
+    func test_numberBuzz_numberIsMultipyOfFive() {
+        XCTAssertEqual(FizzBuzz().numberBuzz(5), "Buzz")
+        XCTAssertEqual(FizzBuzz().numberBuzz(10), "Buzz")
+        XCTAssertEqual(FizzBuzz().numberBuzz(15), "Buzz")
+        XCTAssertEqual(FizzBuzz().numberBuzz(100), "Buzz")
     }
 }
