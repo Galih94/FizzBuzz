@@ -52,13 +52,10 @@ final class FizzBuzzTests: XCTestCase {
         XCTAssertEqual(FizzBuzz().numberBuzz(100), "Buzz")
     }
     
-    func test_numberFizzBuzz_numberIsNotMultiplyByThreeAndFive() {
+    func test_numberFizzBuzz() {
         XCTAssertEqual(FizzBuzz().numberFizzBuzz(3), nil)
         XCTAssertEqual(FizzBuzz().numberFizzBuzz(5), nil)
         XCTAssertEqual(FizzBuzz().numberFizzBuzz(9), nil)
-    }
-    
-    func test_numberFizzBuzz_numberIsMultiplyByThreeAndFive() {
         XCTAssertEqual(FizzBuzz().numberFizzBuzz(15), "FizzBuzz")
         XCTAssertEqual(FizzBuzz().numberFizzBuzz(30), "FizzBuzz")
         XCTAssertEqual(FizzBuzz().numberFizzBuzz(60), "FizzBuzz")
