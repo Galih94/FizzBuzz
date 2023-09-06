@@ -13,7 +13,8 @@ public class FizzBuzz {
     }
     
     public func numberFizz(_ number: Int) -> String? {
-        return nil
+        guard number.isMultiple(of: 3) else { return nil }
+        return "Fizz"
     }
 }
 
@@ -23,7 +24,15 @@ final class FizzBuzzTests: XCTestCase {
         XCTAssertEqual(FizzBuzz().numberDefaultText(1), "1")
     }
     
-    func test_numberFizz_resultNumberNotMultiplyThree_numberTwo() {
+    func test_numberFizz_resultNumberNotMultiplyThree() {
         XCTAssertEqual(FizzBuzz().numberFizz(2), nil)
+        XCTAssertEqual(FizzBuzz().numberFizz(4), nil)
+    }
+    
+    func test_numberFizz_resultNumberMultiplyThree() {
+        XCTAssertEqual(FizzBuzz().numberFizz(3), "Fizz")
+        XCTAssertEqual(FizzBuzz().numberFizz(6), "Fizz")
+        XCTAssertEqual(FizzBuzz().numberFizz(9), "Fizz")
+        XCTAssertEqual(FizzBuzz().numberFizz(99), "Fizz")
     }
 }
