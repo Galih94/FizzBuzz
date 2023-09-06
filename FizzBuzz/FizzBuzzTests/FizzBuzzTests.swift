@@ -19,17 +19,14 @@ public class FizzBuzz {
 }
 
 final class FizzBuzzTests: XCTestCase {
-    func test_numberDefaultText_resultNumberInString() {
+    func test_numberDefaultText() {
         XCTAssertEqual(FizzBuzz().numberDefaultText(0), "0")
         XCTAssertEqual(FizzBuzz().numberDefaultText(1), "1")
     }
     
-    func test_numberFizz_resultNumberNotMultiplyThree() {
+    func test_numberFizz() {
         XCTAssertEqual(FizzBuzz().numberFizz(2), nil)
         XCTAssertEqual(FizzBuzz().numberFizz(4), nil)
-    }
-    
-    func test_numberFizz_resultNumberMultiplyThree() {
         XCTAssertEqual(FizzBuzz().numberFizz(3), "Fizz")
         XCTAssertEqual(FizzBuzz().numberFizz(6), "Fizz")
         XCTAssertEqual(FizzBuzz().numberFizz(9), "Fizz")
