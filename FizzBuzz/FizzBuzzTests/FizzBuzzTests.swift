@@ -38,12 +38,9 @@ final class FizzBuzzTests: XCTestCase {
         XCTAssertEqual(FizzBuzz().numberFizz(99), "Fizz")
     }
     
-    func test_numberBuzz_numberIsNotMultipyOfFive() {
+    func test_numberBuzz() {
         XCTAssertEqual(FizzBuzz().numberBuzz(2), nil)
         XCTAssertEqual(FizzBuzz().numberBuzz(4), nil)
-    }
-    
-    func test_numberBuzz_numberIsMultipyOfFive() {
         XCTAssertEqual(FizzBuzz().numberBuzz(5), "Buzz")
         XCTAssertEqual(FizzBuzz().numberBuzz(10), "Buzz")
         XCTAssertEqual(FizzBuzz().numberBuzz(15), "Buzz")
