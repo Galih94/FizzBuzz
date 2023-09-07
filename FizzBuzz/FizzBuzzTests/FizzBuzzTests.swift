@@ -29,6 +29,11 @@ final class FizzBuzzTests: XCTestCase {
         expectGetNumber(from: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], expectedResult: ["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"])
     }
     
+    func test_run() {
+        XCTAssertEqual(FizzBuzz.run(from: 1, to: 2), ["1", "2"])
+        XCTAssertEqual(FizzBuzz.run(from: 1, to: 4), ["1", "2", "Fizz", "4"])
+    }
+    
     // MARK: Helpers
     private func expectNumberDefault(from numbers: [Int], expectedResult: [String], file: StaticString = #filePath, line: UInt = #line) {
         for i in 0..<numbers.count {

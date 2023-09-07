@@ -5,7 +5,15 @@
 //  Created by Galih Samudra on 06/09/23.
 //
 
-public class FizzBuzz {
+public final class FizzBuzz {
+    
+    public static func run(from start: Int, to end: Int) -> [String] {
+        var result = [String]()
+        for i in start...end {
+            result.append(getNumber(i))
+        }
+        return result
+    }
     
     public static func getNumber(_ number: Int) -> String {
         if let numberFizzBuzz = numberFizzBuzz(number) {
