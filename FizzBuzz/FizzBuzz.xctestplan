@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "CCC13217-7599-4970-95DF-9880F310350B",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:FizzBuzz.xcodeproj",
+        "identifier" : "2AD1B0852AA8BB43002D29C7",
+        "name" : "FizzBuzzTests"
+      }
+    }
+  ],
+  "version" : 1
+}

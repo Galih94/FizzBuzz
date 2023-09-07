@@ -23,6 +23,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A407A8F2AA9B38C001DE776 /* FizzBuzz.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = FizzBuzz.xctestplan; sourceTree = "<group>"; };
 		2AD1B07E2AA8BB42002D29C7 /* FizzBuzz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FizzBuzz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD1B0862AA8BB43002D29C7 /* FizzBuzzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FizzBuzzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD1B08B2AA8BB43002D29C7 /* FizzBuzzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzTests.swift; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		2AD1B0742AA8BB42002D29C7 = {
 			isa = PBXGroup;
 			children = (
+				2A407A8F2AA9B38C001DE776 /* FizzBuzz.xctestplan */,
 				2AD1B0802AA8BB42002D29C7 /* FizzBuzz */,
 				2AD1B08A2AA8BB43002D29C7 /* FizzBuzzTests */,
 				2AD1B07F2AA8BB42002D29C7 /* Products */,
