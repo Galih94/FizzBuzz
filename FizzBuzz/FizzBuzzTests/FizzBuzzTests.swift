@@ -18,12 +18,7 @@ final class FizzBuzzTests: XCTestCase {
     }
     
     func test_numberBuzz() {
-        XCTAssertEqual(FizzBuzz.numberBuzz(2), nil)
-        XCTAssertEqual(FizzBuzz.numberBuzz(4), nil)
-        XCTAssertEqual(FizzBuzz.numberBuzz(5), "Buzz")
-        XCTAssertEqual(FizzBuzz.numberBuzz(10), "Buzz")
-        XCTAssertEqual(FizzBuzz.numberBuzz(15), "Buzz")
-        XCTAssertEqual(FizzBuzz.numberBuzz(100), "Buzz")
+        expectNumberBuzz(from: [2, 4, 5, 10, 15, 100], expectedResult: [nil, nil, "Buzz", "Buzz", "Buzz", "Buzz"])
     }
     
     func test_numberFizzBuzz() {
@@ -64,6 +59,12 @@ final class FizzBuzzTests: XCTestCase {
     private func expectNumberFizz(from numbers: [Int], expectedResult: [String?], file: StaticString = #filePath, line: UInt = #line) {
         for i in 0..<numbers.count {
             XCTAssertEqual(FizzBuzz.numberFizz(numbers[i]), expectedResult[i], file: file, line: line)
+        }
+    }
+    
+    private func expectNumberBuzz(from numbers: [Int], expectedResult: [String?], file: StaticString = #filePath, line: UInt = #line) {
+        for i in 0..<numbers.count {
+            XCTAssertEqual(FizzBuzz.numberBuzz(numbers[i]), expectedResult[i], file: file, line: line)
         }
     }
 }
