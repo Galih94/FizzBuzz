@@ -41,4 +41,22 @@ final class FizzBuzzTests: XCTestCase {
         XCTAssertEqual(FizzBuzz.numberFizzBuzz(60), "FizzBuzz")
         XCTAssertEqual(FizzBuzz.numberFizzBuzz(90), "FizzBuzz")
     }
+    
+    func test_getNumber_numberFromOneToTen() {
+        XCTAssertEqual(FizzBuzz.getNumber(1), "1")
+        XCTAssertEqual(FizzBuzz.getNumber(2), "2")
+        XCTAssertEqual(FizzBuzz.getNumber(3), "Fizz")
+        XCTAssertEqual(FizzBuzz.getNumber(4), "4")
+        XCTAssertEqual(FizzBuzz.getNumber(5), "Buzz")
+        XCTAssertEqual(FizzBuzz.getNumber(6), "Fizz")
+        XCTAssertEqual(FizzBuzz.getNumber(7), "7")
+        XCTAssertEqual(FizzBuzz.getNumber(8), "8")
+        XCTAssertEqual(FizzBuzz.getNumber(9), "Fizz")
+        XCTAssertEqual(FizzBuzz.getNumber(10), "Buzz")
+        XCTAssertEqual(FizzBuzz.getNumber(11), "11")
+        XCTAssertEqual(FizzBuzz.getNumber(12), "Fizz")
+        XCTAssertEqual(FizzBuzz.getNumber(13), "13")
+        XCTAssertEqual(FizzBuzz.getNumber(14), "14")
+        XCTAssertEqual(FizzBuzz.getNumber(15), "FizzBuzz")
+    }
 }
