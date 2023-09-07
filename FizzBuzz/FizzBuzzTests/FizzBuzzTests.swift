@@ -10,8 +10,7 @@ import FizzBuzz
 
 final class FizzBuzzTests: XCTestCase {
     func test_numberDefaultText() {
-        XCTAssertEqual(FizzBuzz.numberDefaultText(0), "0")
-        XCTAssertEqual(FizzBuzz.numberDefaultText(1), "1")
+        expectNumberDefault(from: [0, 1, 2, 3, 4], expectedResult: ["0", "1", "2", "3", "4"])
     }
     
     func test_numberFizz() {
@@ -58,5 +57,12 @@ final class FizzBuzzTests: XCTestCase {
         XCTAssertEqual(FizzBuzz.getNumber(13), "13")
         XCTAssertEqual(FizzBuzz.getNumber(14), "14")
         XCTAssertEqual(FizzBuzz.getNumber(15), "FizzBuzz")
+    }
+    
+    // MARK: Helpers
+    private func expectNumberDefault(from numbers: [Int], expectedResult: [String], file: StaticString = #filePath, line: UInt = #line) {
+        for i in 0..<numbers.count {
+            XCTAssertEqual(FizzBuzz.numberDefaultText(numbers[i]), expectedResult[i])
+        }
     }
 }
