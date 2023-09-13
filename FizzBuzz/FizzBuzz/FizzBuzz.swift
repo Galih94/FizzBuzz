@@ -6,6 +6,9 @@
 //
 
 public final class FizzBuzz {
+    private static let FIZZ_NUMBER = 3
+    private static let BUZZ_NUMBER = 5
+    private static let FIZZBUZZ_NUMBER = 15
     
     public static func run(from start: Int, to end: Int) -> [String] {
         var result = [String]()
@@ -32,17 +35,17 @@ public final class FizzBuzz {
     }
     
     public static func numberFizz(_ number: Int) -> String? {
-        guard number.isMultiple(of: 3) else { return nil }
+        guard number.isMultiple(of: FIZZ_NUMBER) else { return nil }
         return "Fizz"
     }
     
     public static func numberBuzz(_ number: Int) -> String? {
-        guard number.isMultiple(of: 5) else { return nil }
+        guard number.isMultiple(of: BUZZ_NUMBER) else { return nil }
         return "Buzz"
     }
     
     public static func numberFizzBuzz(_ number: Int) -> String? {
-        guard number.isMultiple(of: 15) else { return nil }
+        guard number.isMultiple(of: FIZZBUZZ_NUMBER) else { return nil }
         return "FizzBuzz"
     }
 }
